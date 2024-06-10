@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /admin/*
+Disallow: /login
+Disallow: /uploads/*
+Disallow: /support
+
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&calltouch_tm&roistat&roistat_referrer&roistat_pos&admitad_uid
+Clean-Param: openstat
+
+Sitemap: https://qazqar.kz/sitemap.xml
