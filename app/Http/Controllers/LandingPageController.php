@@ -15,8 +15,6 @@ use App\Models\PostReactionEmoji;
 use App\Models\Setting;
 use App\Models\SubCategory;
 use App\Models\Subscriber;
-use App\Models\User;
-use App\Scopes\LanguageScope;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -162,18 +160,19 @@ class LandingPageController extends AppBaseController
      * @param  null  $id
      * @return Application|JsonResponse|RedirectResponse|Redirector
      */
+    public function changeLanguage($langId)
+    {
+        if ($langId) {
+            session(['frontLanguageChange' => $langId]);
+
+            return redirect()->back();
+        }
+        return response()->json(['message' => 'error change language']);
+    }
+
+
     public function detailPage(Request $request, $slug, $id = null)
     {
-        if ($request->expectsJson()) {
-            // Обрабатываем данные запроса
-            session(['frontLanguageChange' => $request->input('data')]);
-
-            // Возвращаем JSON ответ
-            return response()->json([
-                'message' => __('messages.placeholder.language_change_successfully')
-            ]);
-        }
-
         $post = Post::with([
             'category', 'postArticle', 'postVideo', 'postAudios', 'postGalleries', 'postSortLists.media', 'postSortLists', 'media', 'rssFeed',
         ])->where('slug', $slug)->whereVisibility(Post::VISIBILITY_ACTIVE)->firstOrFail();

@@ -2,6 +2,8 @@
 @section('title')
     {!! !empty($subCategory) ? $subCategory : $categoryName !!}
 @endsection
+@section('meta_description')Qazqar - Категория блога. @if(isset($categoryName)) {!! ucfirst(trans($categoryName)) !!}@endif @if(isset($subCategory)){!! $subCategory !!}@endif @endsection
+
 @section('pageCss')
     <link href="{{asset('front_web/build/scss/sports.css')}}" rel="stylesheet" type="text/css">
 @endsection

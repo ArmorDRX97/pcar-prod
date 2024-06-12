@@ -263,7 +263,7 @@ Route::middleware('xss','setLanguage')->group(function () {
     Route::post('/comments', [LandingPageController::class, 'saveCommentsUser'])->name('comment.store');
     Route::delete('/comments/{comment}', [LandingPageController::class, 'destroyComment'])->name('comment.destroy');
     Route::post('subscribe', [LandingPageController::class, 'saveSubscribeUser'])->name('subscribe.store');
-    Route::post('language-change-home', [LandingPageController::class, 'detailPage'])->name('language.change.home');
+    Route::get('change-lang/{langId}', [LandingPageController::class, 'changeLanguage'])->name('language.change.home');
 
     Route::get('p', [LandingPageController::class, 'allPosts'])->name('allPosts');
     Route::get('p/{data}', [LandingPageController::class, 'detailPage'])->name('detailPage')->middleware('analytic');

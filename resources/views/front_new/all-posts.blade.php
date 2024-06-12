@@ -2,6 +2,7 @@
 @section('title')
     {{ __('messages.dashboard_show.posts') }}
 @endsection
+@section('meta_description', 'Интересные факты об аренде авто в Астане')
 @section('pageCss')
     <link href="{{asset('front_web/build/scss/sports.css')}}" rel="stylesheet" type="text/css">
 @endsection
@@ -9,6 +10,8 @@
     <section class="page-header mb-5">
         <div class="container">
             <div class="page-header-body breadcrumb-header-body">
+                <h1 class="blog-h1">{{ __('blog.vse_stati_nashego_bloga') }}</h1>
+                <hr class="blog-hr">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a href="/p"><i class="fas fa-home"></i>{{ __('blog.all_articles') }}</a></li>

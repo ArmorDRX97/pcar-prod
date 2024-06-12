@@ -1,5 +1,6 @@
 @extends('front_new.layouts.app')
-
+@section('title', 'Прокат автомобиля Huyndai Elantra - 2023 года без водителя по городу Астана')
+@section('meta_description', 'Прокат автомобиля Huyndai Elantra - 2023 года без водителя по городу Астана')
 @section('content')
     <section class="page-header">
         <div class="container">

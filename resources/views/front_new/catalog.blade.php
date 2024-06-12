@@ -1,10 +1,11 @@
 @extends('front_new.layouts.app')
-
+@section('title', 'Каталог автомобилей для проката без водителей по городу Астана.')
+@section('meta_description', 'Каталог автомобилей для проката без водителей по городу Астана. Выберите свой автомобиль по выгодным ценам, оформите заявку и получите в течении нескольких часов!')
 @section('content')
     <section class="page-header">
         <div class="container">
             <div class="page-header-body">
-                <div class="page-title">@lang('main.catalog_avto')</div>
+                <h1 class="page-title">@lang('main.catalog_avto')</h1>
             </div>
         </div>
     </section>

@@ -24,7 +24,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a href="/p"><i class="fas fa-home me-1"></i>{{ __('messages.details.home') }}</a></li>
-                        <li class="breadcrumb-item"><a href="{{route('categoryPage',$postDetail->category->name)}}">{!! $postDetail->category->name !!}</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('categoryPage', Str::slug($postDetail->category->name))}}">{!! $postDetail->category->name !!}</a></li>
                         <li class="breadcrumb-item active" aria-current="page">{!! $postDetail->title !!}</li>
                     </ol>
                 </nav>

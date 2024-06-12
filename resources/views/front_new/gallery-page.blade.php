@@ -2,6 +2,7 @@
 @section('title')
     {{__('messages.post.gallery') }}
 @endsection
+@section('meta_description', 'Qazqar - галерея блога')
 @section('pageCss')
     <link href="{{asset('front_web/build/scss/gallery.css')}}" rel="stylesheet" type="text/css">
 @endsection
@@ -9,7 +10,7 @@
     <section class="page-header mb-5">
         <div class="container">
             <div class="page-header-body breadcrumb-header-body">
-                <div class="page-title">{{__('messages.post.gallery') }}</div>
+                <h1 class="page-title">{{__('messages.post.gallery') }}</h1>
             </div>
         </div>
     </section>

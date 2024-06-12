@@ -2,7 +2,7 @@
 @section('title')
     {{__('messages.post.gallery') }}
 @endsection
-
+@section('meta_description')Qazqar - Альбом галереи. {!! $allSubCategory->first()->album->name !!}@endsection
 @section('content')
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
@@ -10,7 +10,7 @@
     <section class="page-header mb-5">
         <div class="container">
             <div class="page-header-body breadcrumb-header-body">
-                <div class="page-title">{!! $allSubCategory->first()->album->name !!}</div>
+                <h1 class="page-title">{!! $allSubCategory->first()->album->name !!}</h1>
             </div>
         </div>
     </section>

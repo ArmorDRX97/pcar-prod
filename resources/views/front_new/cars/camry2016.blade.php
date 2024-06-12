@@ -1,5 +1,6 @@
 @extends('front_new.layouts.app')
-
+@section('title', 'Прокат автомобиля Toyota Camry 50-55 - 2016 года без водителя по городу Астана')
+@section('meta_description', 'Прокат автомобиля Toyota Camry 50-55 - 2016 года без водителя по городу Астана')
 @section('content')
     <section class="page-header">
         <div class="container">

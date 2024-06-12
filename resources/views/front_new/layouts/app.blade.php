@@ -1,5 +1,5 @@
 <?php
-
+/*
 if (preg_match('/^www\.(.*)$/', $_SERVER['HTTP_HOST'], $matches)) {
     $new_url = 'https://' . $matches[1] . $_SERVER['REQUEST_URI'];
     header('HTTP/1.1 301 Moved Permanently');
@@ -7,12 +7,12 @@ if (preg_match('/^www\.(.*)$/', $_SERVER['HTTP_HOST'], $matches)) {
     exit();
 }
 
-if(preg_match("~(/{2,})~", $_SERVER["REQUEST_URI"])){  // Проверяем, есть ли в урле повторяющиеся слеши 
+if(preg_match("~(/{2,})~", $_SERVER["REQUEST_URI"])){  // Проверяем, есть ли в урле повторяющиеся слеши
   $temp_redirect = preg_replace('~(/{2,})~', '/', $_SERVER["REQUEST_URI"]); // В переменную заносим новый урл, без повторяющихся слешей
 
   header("HTTP/1.1 301 Moved Permanently"); // Делаем 301 редирект правильную страницу
-  header("Location: ".$temp_redirect); 
-  exit(); 
+  header("Location: ".$temp_redirect);
+  exit();
 }
 
 $LastModified_unix = strtotime(date("D, d M Y H:i:s", filectime($_SERVER['SCRIPT_FILENAME'])));
@@ -36,7 +36,7 @@ else if (in_array($_SERVER['REQUEST_URI'], array('/company/', '/projects/', '/in
   $expires = 14;
 }
 header('Expires: '.gmdate('D, d M Y H:i:s \G\M\T', time() + $expires*24*60*60));
-
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,8 +64,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <meta name="keywords" content="@yield('meta_tags'),{{!empty(getSEOTools()) ? getSEOTools()->keyword : ''}}">
 {{--    @endif--}}
 {{--    @if(!empty(getSEOTools()->site_description))--}}
-        <meta name="description" content="@if(View::hasSection('meta_description'))@yield('meta_description')
-        @else{{!empty(getSEOTools()) ? getSEOTools()->site_description : ''}}@endif">
+        <meta name="description" content="@if(View::hasSection('meta_description'))@yield('meta_description')@elseПрокат автомобилей без водителей в Астане - огромный выбор вариантов от эконом до бизнес и премиум класса. Доступные цены, удобные условия сотрудничества. Оформить заявку и забронировать понравившееся авто можно на нашем сайте.@endif">
 {{--    @endif--}}
 
     <!--meta http-equiv="content-language" content="{{ getFrontSelectLanguageName() ?? 'ru' }}"-->
@@ -77,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta property="og:url" content="https://qazqar.kz" />
     <meta property="og:description" content="Прокат автомобилей без водителей в Астане - огромный выбор вариантов от эконом до бизнес и премиум класса. Доступные цены, удобные условия сотрудничества. Оформить заявку и забронировать понравившееся авто можно на нашем сайте." />
     <meta property="og:site_name" content="Прокат автомобилей" />
-    <title>Qazqar|{{(!empty(getSEOTools()->site_title)) ? getSEOTools()->site_title : $settings['application_name']}} </title>
+    <title>Qazqar | @if(View::hasSection('title'))@yield('title')@elseПрокат автомобилей без водителей в Астане | Самые низкие цены@endif</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -101,29 +100,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     @livewireStyles
     {!! reCaptcha()->renderJs() !!}
 
-{{--    @livewireScripts--}}
-{{--    <script src="{{ asset('vendor/livewire/livewire.js') }}"></script>--}}
-{{--    @include('livewire.livewire-turbo')--}}
-
-    @php
-        $langSession = Session::get('frontLanguageChange');
-        $frontLanguage = !isset($langSession) ? getSettingValue()['front_language'] : $langSession;
-    @endphp
-
-{{--    <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js"--}}
-{{--            data-turbolinks-eval="false" data-turbo-eval="false"></script>--}}
     <script src='https://www.google.com/recaptcha/api.js'></script>
     @routes
-    <script src="{{ asset('messages.js') }}"></script>
-    <script data-turbo-eval="false">
-        let userProfile = '{{ asset('images/avatar.png') }}'
-        let siteKey = "{{$settings['site_key']}}"
-        let frontLanguage = "{{ App\Models\Language::find($frontLanguage)->iso_code }}"
-
-        Lang.setLocale(frontLanguage)
-    </script>
-{{--    <script src="{{ mix('assets/js/front-third-party.js') }}"></script>--}}
-{{--    <script src="{{ mix('assets/js/front-pages.js') }}"></script>--}}
     <script>
         {!! (!empty(getSEOTools()->google_analytics)) ? getSEOTools()->google_analytics : '' !!}
     </script>
@@ -144,7 +122,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="google-site-verification" content="J3HquU8i9jQSNGIi0_2GJEJIdYELffF0P84oRo2hD60" />
     <meta name="yandex-verification" content="810f43f17501b67d" />
 
-<script type='application/ld+json'> 
+<script type='application/ld+json'>
 {
   "@context": "http://www.schema.org",
   "@type": "Organization",
@@ -227,12 +205,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div>
     @yield('content')
 </div>
-{{--<div class="preloader-block">--}}
-{{--    <div class="preloader-div">--}}
-{{--        <span class="text">Загрузка</span>--}}
-{{--        <span class="preloader"></span>--}}
-{{--    </div>--}}
-{{--</div>--}}
+<div style="position: fixed; bottom: 0;left: 0; z-index: 235325325; background-color: #111; color: #fff;padding: 20px;font-size: 20px;">
+    @php print_r(\Illuminate\Support\Facades\Session::get('frontLanguageChange')) @endphp
+</div>
+
 <!-- start footer section -->
 @include('front_new.layouts.footer')
 <!-- end footer section -->

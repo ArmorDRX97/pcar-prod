@@ -1,4 +1,5 @@
 <?php return array(
+    'vse_stati_nashego_bloga' => 'QazQar - біздің блогтағы барлық мақалалар',
     'all_articles' => 'Барлық мақалалар',
     'comments' => 'Пікірлер',
     'what_reaction' => 'Сіздің реакцияңыз қандай?',

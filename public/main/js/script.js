@@ -120,35 +120,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const langs = document.querySelectorAll('.selectLanguage');
-    for(let i = 0; i < langs.length; i++){
-        langs[i].addEventListener('click', function () {
-            const langId = Number(langs[i].getAttribute('data-id'));
-
-            fetch(route('language.change.home'), {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json', // Указываем, что ожидаем ответ в формате JSON
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-                },
-                body: JSON.stringify({ data: langId })
-            })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json(); // Преобразуем ответ в JSON
-                })
-                .then(data => {
-                    console.log(data);
-                    window.location.href = '/';
-                })
-                .catch(error => {
-                    console.log('There has been a problem with your fetch operation:', error);
-                });
-        })
-    }
-
 
     $('.emoji-id').on('click', function (event) {
         let emojiId = $(event.currentTarget).data('emoji')

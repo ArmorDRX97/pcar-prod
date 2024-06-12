@@ -2,6 +2,8 @@
 @section('title')
     {!! $tagName !!}
 @endsection
+@section('meta_description')Qazqar - Тег блога. @if(isset($tagName)) {!! ucfirst(trans($tagName)) !!}@endif @endsection
+
 @section('pageCss')
     <link href="{{asset('front_web/build/scss/sports.css')}}" rel="stylesheet" type="text/css">
 @endsection

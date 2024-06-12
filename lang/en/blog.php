@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'vse_stati_nashego_bloga' => 'QazQar - all articles from our blog',
     'all_articles' => 'All articles',
     'comments' => 'Comments',
     'what_reaction' => 'What\'s Your Reaction?',

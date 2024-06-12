@@ -20,15 +20,13 @@ class SetLanguage
      */
     public function handle(Request $request, Closure $next)
     {
-        $langIdLanguage = empty(Session::get('frontLanguageChange'));
-        if ($langIdLanguage) {
-                $langId = getSettingValue()['front_language'];
-                App::setLocale(Language::find($langId)->iso_code);
-        } else {
-            $langId = Session::get('frontLanguageChange');
+        $langId = Session::get('frontLanguageChange');
+        if (!empty($langId)) {
             App::setLocale(Language::find($langId)->iso_code);
+        } else {
+            $defaultLangId = getSettingValue()['front_language'];
+            App::setLocale(Language::find($defaultLangId)->iso_code);
         }
-
         return $next($request);
     }
 }

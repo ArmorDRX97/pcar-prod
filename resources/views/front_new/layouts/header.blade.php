@@ -34,21 +34,21 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
                     @if(app()->getLocale() !== 'ru')
-                        <a class="lang-item selectLanguage" href="javascript:void(0)" data-id="6">
+                        <a class="lang-item selectLanguage" href="/change-lang/6" data-id="6">
                             <span>RU</span><img src="{{asset('main/img/langs/ru.png')}}" alt="ru">
                         </a>
                     @endif
                 </li>
                 <li>
                     @if(app()->getLocale() !== 'kz')
-                        <a class="lang-item selectLanguage" href="javascript:void(0)" data-id="7">
+                        <a class="lang-item selectLanguage" href="/change-lang/7" data-id="7">
                             <span>KZ</span><img src="{{asset('main/img/langs/kz.png')}}" alt="kz">
                         </a>
                     @endif
                 </li>
                 <li>
                     @if(app()->getLocale() !== 'en')
-                        <a class="lang-item selectLanguage" href="javascript:void(0)" data-id="1">
+                        <a class="lang-item selectLanguage" href="/change-lang/1" data-id="1">
                             <span>EN</span><img src="{{asset('main/img/langs/en.png')}}" alt="en">
                         </a>
                     @endif
@@ -82,14 +82,14 @@
             </ul>
             <hr>
             <ul class="langs-m">
-                <li><a data-id="6" class="lang-item selectLanguage @if(app()->getLocale() == 'ru') active @endif"
-                       @if(app()->getLocale() !== 'ru') href="javascript:void(0)" @endif><span>RU</span><img
+                <li><a class="lang-item selectLanguage @if(app()->getLocale() == 'ru') active @endif"
+                       @if(app()->getLocale() !== 'ru') href="/change-lang/6" @endif><span>RU</span><img
                             src="{{asset('main/img/langs/ru.png')}}" alt="ru"></a></li>
-                <li><a data-id="7" class="lang-item selectLanguage @if(app()->getLocale() == 'kz') active @endif"
-                       @if(app()->getLocale() !== 'kz') href="javascript:void(0)" @endif><span>KZ</span><img
+                <li><a class="lang-item selectLanguage @if(app()->getLocale() == 'kz') active @endif"
+                       @if(app()->getLocale() !== 'kz') href="/change-lang/7" @endif><span>KZ</span><img
                             src="{{asset('main/img/langs/kz.png')}}" alt="en"></a></li>
-                <li><a data-id="1" class="lang-item selectLanguage @if(app()->getLocale() == 'en') active @endif"
-                       @if(app()->getLocale() !== 'en') href="javascript:void(0)" @endif><span>EN</span><img
+                <li><a class="lang-item selectLanguage @if(app()->getLocale() == 'en') active @endif"
+                       @if(app()->getLocale() !== 'en') href="/change-lang/1" @endif><span>EN</span><img
                             src="{{asset('main/img/langs/en.png')}}" alt="en"></a></li>
             </ul>
             <hr>

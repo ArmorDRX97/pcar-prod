@@ -1,5 +1,4 @@
 @extends('front_new.layouts.app')
-
 @section('content')
 
     <main class="main-block">
@@ -29,9 +28,14 @@
                             <img src="{{asset('main/img/cars/accent2015.jpg')}}" alt="test">
                             <div class="title">Huyndai Accent - 2015</div>
                             <div class="card-car-chars">
-                                <div class="add-li"><i class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">groups</i> 5 @lang('car_once.people')</div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')
+                                </div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')
+                                </div>
+                                <div class="add-li"><i class="material-symbols-outlined">groups</i>
+                                    5 @lang('car_once.people')</div>
                             </div>
                             <div class="car-card-footer">
                                 <div class="cost">
@@ -47,9 +51,14 @@
                             <img src="{{asset('main/img/cars/accent2023.jpg')}}" alt="test">
                             <div class="title">Huyndai Accent - 2023</div>
                             <div class="card-car-chars">
-                                <div class="add-li"><i class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">groups</i> 5 @lang('car_once.people')</div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')
+                                </div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')
+                                </div>
+                                <div class="add-li"><i class="material-symbols-outlined">groups</i>
+                                    5 @lang('car_once.people')</div>
                             </div>
                             <div class="car-card-footer">
                                 <div class="cost">
@@ -65,9 +74,14 @@
                             <img src="{{asset('main/img/cars/elantra.jpg')}}" alt="test">
                             <div class="title">Huyndai Elantra - 2023</div>
                             <div class="card-car-chars">
-                                <div class="add-li"><i class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">groups</i> 5 @lang('car_once.people')</div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')
+                                </div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')
+                                </div>
+                                <div class="add-li"><i class="material-symbols-outlined">groups</i>
+                                    5 @lang('car_once.people')</div>
                             </div>
                             <div class="car-card-footer">
                                 <div class="cost">
@@ -83,9 +97,14 @@
                             <img src="{{asset('main/img/cars/camry.jpg')}}" alt="test">
                             <div class="title">Toyota Camry 50-55 - 2016</div>
                             <div class="card-car-chars">
-                                <div class="add-li"><i class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">groups</i> 5 @lang('car_once.people')</div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')
+                                </div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')
+                                </div>
+                                <div class="add-li"><i class="material-symbols-outlined">groups</i>
+                                    5 @lang('car_once.people')</div>
                             </div>
                             <div class="car-card-footer">
                                 <div class="cost">
@@ -101,9 +120,14 @@
                             <img src="{{asset('main/img/cars/sonata.jpg')}}" alt="test">
                             <div class="title">Huyndai Sonata - 2022</div>
                             <div class="card-car-chars">
-                                <div class="add-li"><i class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">groups</i> 5 @lang('car_once.people')</div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')
+                                </div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')
+                                </div>
+                                <div class="add-li"><i class="material-symbols-outlined">groups</i>
+                                    5 @lang('car_once.people')</div>
                             </div>
                             <div class="car-card-footer">
                                 <div class="cost">
@@ -119,9 +143,14 @@
                             <img src="{{asset('main/img/cars/tucson.jpg')}}" alt="test">
                             <div class="title">Huyndai Tucson - 2023</div>
                             <div class="card-car-chars">
-                                <div class="add-li"><i class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">groups</i> 5 @lang('car_once.people')</div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')
+                                </div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')
+                                </div>
+                                <div class="add-li"><i class="material-symbols-outlined">groups</i>
+                                    5 @lang('car_once.people')</div>
                             </div>
                             <div class="car-card-footer">
                                 <div class="cost">
@@ -137,9 +166,14 @@
                             <img src="{{asset('main/img/cars/kia-k5.jpg')}}" alt="test">
                             <div class="title">KIA K5 - 2021</div>
                             <div class="card-car-chars">
-                                <div class="add-li"><i class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')</div>
-                                <div class="add-li"><i class="material-symbols-outlined">groups</i> 5 @lang('car_once.people')</div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">ac_unit</i> @lang('car_once.conditioner')
+                                </div>
+                                <div class="add-li"><i
+                                        class="material-symbols-outlined">auto_transmission</i> @lang('car_once.akkp')
+                                </div>
+                                <div class="add-li"><i class="material-symbols-outlined">groups</i>
+                                    5 @lang('car_once.people')</div>
                             </div>
                             <div class="car-card-footer">
                                 <div class="cost">
@@ -222,7 +256,8 @@
         <div class="container">
             <div class="global-header text-center text-white">
                 <p class="top-title">@lang('main.vigodno_s_nami')</p>
-                <p class="title with-line line-center white-line">@lang('main.vigodno_s_nami_text_top') <br>@lang('main.vigodno_s_nami_text_bottom')</p>
+                <p class="title with-line line-center white-line">@lang('main.vigodno_s_nami_text_top')
+                    <br>@lang('main.vigodno_s_nami_text_bottom')</p>
             </div>
             <div class="row discount-cards">
                 <div class="col-12 col-md-3 mb-md-0 mb-4">
@@ -270,7 +305,8 @@
                             <span class="avatar"><i class="material-symbols-outlined">person</i></span>
                             <div class="name">Владимир Шевелев</div>
                             <div class="text">
-                                Благодарю компанию и сотрудников за обслуживание, документы оформили быстро! Машина чистая
+                                Благодарю компанию и сотрудников за обслуживание, документы оформили быстро! Машина
+                                чистая
                                 не битая! Советую всем эту компанию, не пожалеете!
                             </div>
                         </div>
@@ -280,7 +316,8 @@
                             <span class="avatar"><i class="material-symbols-outlined">person</i></span>
                             <div class="name">Д. Д.</div>
                             <div class="text">
-                                Один из самых доступных каршерингов. Приемлемые цены и качественный подход к клиенту. Брал
+                                Один из самых доступных каршерингов. Приемлемые цены и качественный подход к клиенту.
+                                Брал
                                 машину в Темиртау, машина в отличном состоянии, цена просто поразила. Рекомендую!
                                 Обязательно в будущем буду только к вам обращаться!
                             </div>
@@ -291,7 +328,8 @@
                             <span class="avatar"><i class="material-symbols-outlined">person</i></span>
                             <div class="name">Амоня Турлыбек</div>
                             <div class="text">
-                                Машиналары жақсы және арзан маған ұнады қала сыртына да шығуға болады және условиясы да өте
+                                Машиналары жақсы және арзан маған ұнады қала сыртына да шығуға болады және условиясы да
+                                өте
                                 жақсы
                             </div>
                         </div>
@@ -301,7 +339,8 @@
                             <span class="avatar"><i class="material-symbols-outlined">person</i></span>
                             <div class="name">Дархан Нугуманов</div>
                             <div class="text">
-                                Отличный сервис, цены самые низкие в городе, коллектив приветливый, особенно хочу отметить
+                                Отличный сервис, цены самые низкие в городе, коллектив приветливый, особенно хочу
+                                отметить
                                 Айман, очень приятная девушка.
                             </div>
                         </div>

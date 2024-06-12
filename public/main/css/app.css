@@ -1888,3 +1888,18 @@ body {
         scale: 1
     }
 }
+
+.blog-h1{
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.blog-hr{
+    color: #fff;
+}
+
+.news-details h1{
+    font-size: 28px;
+}

@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'vse_stati_nashego_bloga' => 'QazQar - все статьи нашего блога',
     'all_articles' => 'Все статьи',
     'comments' => 'Комментарев',
     'what_reaction' => 'Какова Ваша реакция?',

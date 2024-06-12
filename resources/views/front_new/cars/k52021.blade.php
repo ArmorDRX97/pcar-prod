@@ -1,5 +1,6 @@
 @extends('front_new.layouts.app')
-
+@section('title', 'Прокат автомобиля KIA K5 - 2021 года без водителя по городу Астана')
+@section('meta_description', 'Прокат автомобиля KIA K5 - 2021 года без водителя по городу Астана')
 @section('content')
     <section class="page-header">
         <div class="container">
